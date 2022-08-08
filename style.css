@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+main{
+    background-color: rgb(8, 8, 48);
+    height: 100%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    
+
+}
+#tudo{
+    border-radius: 20px;
+    box-shadow: 2px 2px 2px black;
+    background-color: white;
+    max-width: 800px;
+    text-align: justify;
+    margin: auto;
+    padding: 20px;
+    height: 630px;
+}
+#tudo h1{
+    margin-left: 120px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.223);
+}
+#tx{
+    text-align: justify;
+    margin-top: 30px;
+    text-indent: 30px;
+}
+#respeite{
+    margin: 20px 90px 0 0;
+    text-align: right;
+    
+}
+#tudo img{
+    width: 110px;
+
+}
+#img{
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+#inputn{
+    font-size: 0.85em;
+    margin: 30px 0 0 50px;
+    width: 300px;
+   
+    
+}
+#inputn h2{
+    margin-bottom: 20px;
+}
+#inputn p{
+    margin-top: 10px;
+}
+#inputn #bt{
+    display: block;
+    margin-top: 10px;
+    width: 100px;
+    height: 20px;
+    
+}
+
+input{
+    border: 2px solid rgba(0, 0, 0, 0.504);
+}
+
+#res{
+    position: absolute;
+    width: 300px;
+    right: 400px;
+    top: 450px;
+}
+
+#fim{
+    text-align: end;
+    position: absolute;
+    right: 450px;
+    top: 650px;
+}

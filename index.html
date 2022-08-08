@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de multas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="2258693.png" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <div id="tudo">
+            <h1>Sistema de multas</h1>
+            <div id="img"><img src="2258693.png" alt="Semáforo"></div>
+            <p id="tx">Uma das maiores causas de mortes no Brasil é o trânsito. Segundo dados oficiais, morrem no país, anualmente, cerca de 60 mil pessoas. Um número considerado muito grande, se comparado com outros países. Isso sem falar no número de feridos, calculados na faixa de 180 mil anualmente.</p>
+            <p id="respeite"><strong>Respeitem as leis de trânsito!</strong></p>
+            <div id="inputn">
+
+                <h2>Verifique se você levou multa e o valor da sua multa.</h2>
+
+                <p>Digite aqui sua velocidade</p>
+                <input type="number" name="velcar" id="velcar">
+            
+                <p>Digite aqui a velocidade máxima da via</p>
+                <input type="number" name="velmax" id="velmax">   
+
+                <input type="button" value="Verificar" id="bt">
+
+
+            <div id="res">
+              
+        </div>
+         
+            </div>
+            <h2 id="fim">Dirija com cuidado!</h2>
+        </div>
+    </main>
+
+
+<script>
+    var bt = document.querySelector('#bt')
+    bt.addEventListener('click', clicou)
+        function clicou (){
+            var velcar = document.querySelector('#velcar')
+            var velmax = document.querySelector('#velmax')
+            var res = document.querySelector('#res')
+            nvelcar = Number(velcar.value)
+            nvelmax = Number(velmax.value)
+            res.innerHTML = `<p>A sua velocidade é igual a ${nvelcar}.</p>`
+            if(nvelcar == 0 || nvelmax == 0){
+                res.innerHTML = `Digite um valor`
+            }
+            else if(nvelcar > nvelmax + 7 ){
+                res.innerHTML += `<p>Você foi <strong>MULTADO</strong> por excesso de velocidade.</p>`
+                if(nvelcar <= nvelmax + nvelmax / 5){
+                    res.innerHTML += `O valor da sua multa é de <strong>130,16</strong> reais.`
+                }else if(nvelcar <= nvelmax + nvelmax / 2){
+                    res.innerHTML += `O valor da sua multa é de <strong>195,23</strong> reais.`
+                }else{
+                    res.innerHTML += `O valor da sua multa é de <strong>880,41</strong> reais.`
+                }
+            }
+            else if(nvelcar > nvelmax){
+                res.innerHTML += `<p>Você está acima da velocidade, mas está dentro da tolerância de 7km/h, <strong>diminua a velocidade.</strong></p>`
+            }
+                else{
+                res.innerHTML += `<p>Sua velocidade está dentro da velocidade máxima.</p>`
+            }
+         
+        }
+
+</script>
+</body>
+</html>
